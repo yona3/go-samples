@@ -5,6 +5,13 @@ import (
 	"github.com/yona3/go-samples/clean_architecture/infrastructure/api/handler"
 )
 
-func NewRouter(r *gin.Engine, handler handler.AppHandler) {
-	r.GET("/test", handler.Test)
+func NewRouter(r *gin.Engine, h handler.AppHandler) {
+	// test
+	testHandler := h.NewTestHandler()
+	r.GET("/test", testHandler.Test)
+
+	// user
+	userHandler := h.NewUserHandler()
+	r.GET("/users", userHandler.GetAll)
+	r.POST("/users", userHandler.Create)
 }
