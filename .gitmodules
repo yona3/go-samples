@@ -1,0 +1,3 @@
+[submodule "go-auth-sample"]
+	path = go-auth-sample
+	url = https://github.com/yona3/go-auth-sample.git
