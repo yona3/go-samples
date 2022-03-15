@@ -14,8 +14,6 @@ func NewDB() *ent.Client {
 		log.Fatalf("failed opening connection to sqlite: %v", err)
 	}
 
-	defer db.Close()
-
 	// オートマイグレーションツールを実行する
 	if err := db.Schema.Create(context.Background()); err != nil {
 		log.Fatalf("failed creating schema resources: %v", err)
