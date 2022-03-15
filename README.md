@@ -2,5 +2,6 @@
 
 Goの学習用リポジトリ。
 
-- Clean Architecture
-- Go Auth Sample
+- Clean Architecture Sample
+- Auth Sample
+- LINE Bot Sample
